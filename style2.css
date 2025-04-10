@@ -1,0 +1,147 @@
+/* "*":concerne toute la page*/
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+/*========header=======*/
+
+/*container de l'entete*/
+header{
+    background-color: black;
+    opacity:0.8;
+    padding:15px 5%;
+}
+.nav-container{
+
+    display: flex;/*aligner les element sur une ligne */
+    justify-content: space-between;/*justify- content: espacer les element aligne*/
+    align-items: center;/* aligner  les elements verticalement dans notre header*/
+    max-width: 1200px;/* largeur maximale pour les grands ecrans*/
+    margin:auto;/*margin:auto pour aligner*/
+}
+/* styler le logo*/
+.logo{
+    color: pink;
+    font-size: 24px;
+    font-weight: bold;
+}
+.logo span{
+    color: white;
+}
+.nav-links{
+    list-style: none ;/*eneler ou mettre les puces dans une liste*/
+    display: flex;/*aligner les element dans une ligne */
+}
+.nav-links li{
+    margin-left: 20px;/* cree de l' espace a gauche de element de la liste */
+}
+.nav-links a{
+    text-decoration: none; /* enleve le soulignement*/
+    color: white;
+    font-size: 18px;
+}
+/**===main: partie principale===**/
+/*image principale*/
+.hero img{
+    width: 100%;
+    height: auto;
+    display: block;
+
+}
+/*section qui contient le formulaire a gauche et la video a droite */
+.bbr{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: 50px 0px ;
+}
+/*style du div qui contient le formulaire*/
+.amour{
+    width: 45%;
+    background-color: black;
+    opacity: 0.8;
+    color: white;
+    border-radius: 7px;
+    padding: 15px;
+}
+/*style du titre du formulaire*/
+.amour h2{
+    text-align: center;
+    margin-bottom: 22px;
+}
+/*style du labe*/
+form label{
+    display: block;
+    margin-top: 10px;
+    }
+/*STYLE DU CHAMPS INPUT*/
+form input{
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+}
+/**/
+button{
+    background-color: pink;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    margin-top: 16px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+/*=======VIDEO*/
+.mks{
+    width: 45%;
+}
+/*style de video*/
+.mks video{
+    width: 100%;
+    border-radius: 8px;
+}
+/*====pied de page (footer)*/
+footer{
+    background-color: black;
+    opacity: 0.8;
+    color: white;
+    padding: 15px;
+    text-align: center
+    margin-top: 50px;
+}
+/*========responsive========*/
+/*regle css applique *
+/*le bloc des appareils inferieurs tel s que les telephones*/
+@media(max-width:768px){ 
+    /*ajustement de l'element header*/
+    .nav-container{
+        flex-direction: column;/*Mettre le logo et le menus en colonne*/
+        text-align: center/*centre la zone*/
+    }
+}
+/*mettre les element du meny en colonne */
+.nav-links{
+    flex-direction: column;/*place les elents les uns au dessus des autres*/
+    margin-top: 10px;/*ajouter un petit espace au dessus */
+}
+.nav-links li{
+    margin: 5px  0;
+}
+/*section ou le formulaire est a gauche et le video a droite */
+.bbr{
+    flex-direction: column;
+    align-items: center;
+}
+/*adapte les enfants de section dont le formulaire et le menu à droite*/
+.amour,.mks{
+    width: 100%;
+    margin-bottom: 20px;
+}
